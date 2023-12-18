@@ -1,0 +1,16 @@
+<h2>Listado</h2>
+
+<ul class="list-group">
+  <li *ngFor="let personaje of listaPersonajes;
+  let index=index;
+  let inpar=odd"
+  class="list-group-item d-flex justify-content-between align-items-center">
+  <div>
+    <span class="text-danger fw-bold">{{index+1}}</span>
+    <span class="text-info"> {{personaje.nombre}} - </span>
+    <span>poder: <strong>{{personaje.poder}}</strong></span>
+  </div>
+  <button class="btn btn-danger" (click)="sendId(personaje.id)">X</button>
+
+  </li>
+</ul>
